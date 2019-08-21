@@ -71,7 +71,7 @@ let firstNamesAllCaps = runners.map((runner) => {
 console.log(firstNamesAllCaps);
 
 // ==== Challenge 3: Use .filter() ====
-// The large shirts won't be available for the event due to an ordering issue. We need a filtered version of the runners array, containing only those runners with large sized shirts so they can choose a different size. This will be an array of objects.
+// The large shirts won't be av ailable for the event due to an ordering issue. We need a filtered version of the runners array, containing only those runners with large sized shirts so they can choose a different size. This will be an array of objects.
 let runnersLargeSizeShirt = runners.filter((runner) => {
   return runner.shirt_size.includes('L')       //used the filter method on the runners array to return a new array that has object with 'L'
 });
