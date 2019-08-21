@@ -16,6 +16,8 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
     return cb(arr[0]);
   }
 
+  
+
   // NOTES ON THE SOLUTION:
 
   // firstItem is a higher order function.
@@ -32,32 +34,42 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
   function logExorbitantPrice(article) {
     console.log(`this ${article} is worth a million dollars!`);
-  };
+  }
 
   firstItem(items, logExorbitantPrice);
   // "this Pencil is worth a million dollars!"
 */
 
 
+function callbackFunction(data) {
+  console.log(data);
+}
+
 function getLength(arr, cb) {
   // getLength passes the length of the array into the callback.
+  cb(arr.length);
 }
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
+  cb(arr[arr.length - 1]);
 }
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
+  cb(x + y);
 }
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
+  cb(x * y)
 }
 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
+
+  cb(list.indexOf(item) > 0)
 }
 
 /* STRETCH PROBLEM */
